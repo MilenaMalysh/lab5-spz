@@ -1,4 +1,4 @@
-import javafx.collections.ObservableList;
+package Model;
 
 import java.math.BigDecimal;
 import java.sql.ResultSet;
@@ -7,6 +7,7 @@ import java.util.*;
 
 /**
  * Created by Milena on 27.03.2016.
+ * Representation of deriativ
  */
 public class Derivativ {
     DBworker worker;
@@ -20,6 +21,11 @@ public class Derivativ {
         return getEntries(resultSet);
     }
 
+    /**
+     * Return fields in Deriativ in list form
+     * @param resultSet set from DB
+     * @return list of InsuranceEntry
+     */
     public List<InsuranceEntry> getEntries(ResultSet resultSet){
         List<InsuranceEntry> entries = new ArrayList<InsuranceEntry>();
         try {
@@ -59,7 +65,7 @@ public class Derivativ {
 
     @Override
     public String toString() {
-        return "Derivativ{" +
+        return "Model.Derivativ{" +
                 "entries=" + this.getInsurances() +
                 '}';
     }

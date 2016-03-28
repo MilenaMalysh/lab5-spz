@@ -1,9 +1,12 @@
+package Model;
+
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.HashMap;
 
 /**
  * Created by Milena on 27.03.2016.
+ * connetion base tool
  */
 public class DBworker {
     private final String url = "jdbc:mysql://localhost:3306/insurance";
@@ -33,6 +36,12 @@ public class DBworker {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Return set of insurances by condition
+     * @param condition required condition
+     * @return set of insurances
+     */
     public ResultSet selectEntries(String condition){
         String query = "SELECT * FROM insurances " + condition+";";
         try {
@@ -55,6 +64,10 @@ public class DBworker {
         return null;
     }
 
+    /**
+     * Insert value to deriativ
+     */
+
     public void insertValue(String subject, int risk, BigDecimal payout){
         String query = "INSERT INTO insurances(subject, risk, payout) VALUES( ?, ?, ?);";
         try {
@@ -68,6 +81,10 @@ public class DBworker {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Delete value from deriativ
+     */
 
     public void deleteValue(int id){
         String query = "DELETE FROM insurances WHERE id =?;";

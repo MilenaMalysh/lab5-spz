@@ -1,4 +1,8 @@
-import com.sun.scenario.effect.Flood;
+package Model;
+
+import Model.DBworker;
+import Model.Derivativ;
+import Model.InsuranceEntry;
 
 import java.math.BigDecimal;
 
@@ -14,15 +18,14 @@ public class Main {
         //System.out.println(derivativ.sortEntries());
         //System.out.println(derivativ.getByParameter("WHERE payout>100.00 AND risk<60 "));
 
-        //BigDecimal amount = new BigDecimal(650.87);
-        //InsuranceEntry insurance = new InsuranceEntry("gold", 45, amount);
+        //BigDecimal amount = new BigDecimal(6.87);
+        //Model.InsuranceEntry insurance = new Model.InsuranceEntry("barby", 55, amount);
         //derivativ.insertValue(insurance);
         //System.out.println(derivativ.getInsurances());
 
-        InsuranceEntry insurance = new InsuranceEntry(9);
-        derivativ.deleteValue(insurance);
-        System.out.println(derivativ.getInsurances());
-
+        //InsuranceEntry insurance = new InsuranceEntry(9);
+        //derivativ.deleteValue(insurance);
+        //System.out.println(derivativ.getInsurances());
 
         worker.closeConnetion();
 

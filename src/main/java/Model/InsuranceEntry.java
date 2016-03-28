@@ -1,8 +1,11 @@
+package Model;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
  * Created by Milena on 27.03.2016.
+ * representation of insurance
  */
 public class InsuranceEntry {
     private int id;
@@ -61,7 +64,7 @@ public class InsuranceEntry {
 
     @Override
     public String toString() {
-        return "InsuranceEntry{" +
+        return "Model.InsuranceEntry{" +
                 "id=" + id +
                 ", subject='" + subject + '\'' +
                 ", risk=" + risk +
